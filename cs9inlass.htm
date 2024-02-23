@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Form cs9</title>
+
+	<style>
+	/* Your styles go here */
+	form{background-color:silver; font-family:Arial; width:60%;
+		margin-right:auto; margin-left:auto;}
+	</style>
+	<script>type="text/javascript"</script>
+	
+	
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+	<form method="POST" action="">
+		<p>
+			Please Enter Your Name: &nbsp; &nbsp; 
+			<input type="text" name="myname" placeholder="Enter Name Here" size="40" maxlength="40"/>
+		</p>
+		<p>
+			Please select your class:
+			<select name="myclass">
+				<option value="freshman">Freshman</option>
+				<option value="sophomore">Sophomore</option>
+				<option value="junior">Junior</option>
+				<option value="senior">Senior</option>
+			</select>
+		</p>
+		<p>
+			Please select your grade: &nbsp; 
+			<input type="radio" name="mygrade" value="A"/>A Grade
+			<input type="radio" name="mygrade" value="B"/>B Grade
+			<input type="radio" name="mygrade" value="C"/>C Grade
+			<input type="radio" name="mygrade" value="D"/>D Grade
+		</p>
+		<p>
+			Please select the magazines that you need: <br/>
+			<input type="checkbox" name="mymags" value="WSJ"/> Wall Street Journal <br/>
+			<input type="checkbox" name="mymags" value="BG"/> Boston Globe <br/>
+			<input type="checkbox" name="mymags" value="NYT"/> New York Times <br/>
+		</p>
+		<p>
+			Please enter any suggestions for the course: <br/>
+			<textarea name="mysuggs" rows="5" cols="40" placeholder="Type something here"></textarea>
+		</p>
+		<p>
+			<input type="submit" name="Submit" value="I am Done"/> &nbsp;
+			<input type="reset" name="Reset" value="I am Wrong"/>
+		</p>
+
+	</form>	
+	
+	
+  </body>
+</html>

@@ -1,0 +1,7 @@
+table, td {border: 2px solid black;}
+table {font-family: arial; color:navy; text-align: center;
+        width: 70%; margin-right: auto; margin-left: auto;border-collapse: collapse;}
+tr#row1{background-color: yellow; font-weight: bold; }
+.c1 {width: 30%;}
+.c2 {width: 45%;}
+caption {font-family: Georgia, 'Times New Roman', Times, serif; color: red; font-weight: bold; margin-bottom: 2%; font-size: 30px;}
