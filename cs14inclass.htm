@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+
+	    <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+	    <title>CS14 In Class  </title>
+        <!-- Don't worry about the styles. I just added them to make the page look better -->
+        <style type="text/css">
+            h1 {
+                margin-top: 50px;
+                margin-bottom: 50px;
+            }
+            h1 {
+                text-align: center;
+            }
+            img {border:5px solid black; display:block; margin:auto;}
+            p {margin-right:100px; margin-left:100px; margin-bottom:50px;font-family:Arial;}
+        </style>
+
+        <script type="text/javascript">
+            function showImage()
+            {       
+                var myimg, myinp, myinp;
+                myimg = document.getElementById("pics")
+                myinp = prompt("Please enter either clover, shamrock, thyme, or maple");
+                myinp = myinp.tolowercase();
+
+                if (myinp=="shamrock")
+                {myimg.src ="shamrock.jpg";
+                myimg.alt="Shamrock";
+                myimg.title="Shamrock";
+                }
+                else if (myinp=="clover")
+                {myimg.src ="clover.jpg";
+                myimg.alt="clover";
+                myimg.title="clover";
+                }
+                else if (myinp=="maple")
+                {myimg.src ="maple.jpg";
+                myimg.alt="maple";
+                myimg.title="maple";
+                }
+
+                else if (myinp=="thyme")
+                {myimg.src ="thyme.jpg";
+                myimg.alt="thyme";
+                myimg.title="thyme";
+                }
+                else 
+                {alert("Please enter one of the four values above");}
+            }
+
+            function changeImage()
+            {
+                var myimg = document.getElementById("img3");
+                myimg.src="ships.jpg";
+                myimg.alt="ships";
+                myimg.title="Ships";
+
+
+            }
+           
+        </script>
+        
+    </head>
+
+    <body>
+        <!-- Your HTML goes here -->
+        
+        <!-- PROBLEM TWO -->
+        <h1> Using Inputs with Conditional Statements - 2</h1>
+        <div> <p>
+            When the user clicks on the image (placeholder shown) below, ask the user to 
+            input one of 4 values: Shamrock, Clover, Thyme or Maple. Based on what the user
+            provides, show the corresponding image. The 4 images are provided to you. 
+            If you get this to work, then, what if the user types in using all-lower-case or 
+            all-upper-case? How will you change the code to cover that?
+        </p>
+        </div>
+        <div>
+        <img id="pics" onclick="showImage()" src="" alt="Image Goes Here" title="" width="200"/>
+
+        </div>
+
+        <!-- END OF PROBLEM TWO.-->
+
+        <!-- PROBLEM 3- We may/not get to this in class today.-->
+        <h1> Changing the Image when you click on it</h1>
+        <div><p>
+            Given below is an image of planes. When you click on it,
+            change it to the image of ships. The way the function must work is, 
+            no matter what the image is, when you click on it, it must change to the 
+            other image. The ALT and TITLE must change appropriately.
+        </p></div>
+        <div>
+            <img src="planes.jpg" id="img3" onclick="changeImage()" title="Planes" title="Flying High" width="200"/>
+        </div>
+    
+    </body>
+</html>
