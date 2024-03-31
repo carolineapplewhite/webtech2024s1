@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Picking Favorite Movie</title>
+
+	<style>
+	/* Your styles go here */
+	body {background-color: grey;}
+	form{background-color:azure; font-family:Arial; width:60%;
+		margin-right:auto; margin-left:auto; border: 10px solid purple ;
+		padding-left: 3%; padding-top: 1%; padding-bottom: 1%;margin-top: 8%;}
+	h1 {text-align: center; margin-top: 4%;}
+
+	</style>
+	
+	
+	
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+	<h1>Pick Your Favorite Movie Form</h1>
+		
+	<form method="POST" action="">
+		<p>
+			Please Select Your Age: &nbsp; &nbsp; 
+				<input type="radio" name="age" value="17 or under"/> 17 or under
+				<input type="radio" name="age" value="18-25"/> 18-25
+				<input type="radio" name="age" value="26-38"/> 26-35
+				<input type="radio" name="age" value="36-50"/> 36-50
+												
+		</p>
+		<p>
+			Please select your favorite movie genre:
+			<select name="genre">
+				<option value="Select Genre">Select Genre</option>
+				<option value="Action">Action</option>
+				<option value="Comedy">Comedy</option>
+				<option value="Documentary">Documentary</option>
+				<option value="Romance">Romance</option>
+				<option value="Thriller">Thriller</option>
+			</select>
+		</p>
+		<p>
+			Please enter your favorite movie's title: <br/>
+			<textarea name="mysuggs" rows="1" cols="25" placeholder="Movie Title Here"></textarea>
+		</p>
+
+		<p>
+			Why is that movie your favorite?: <br/>
+			<textarea name="mysuggs" rows="8" cols="80" placeholder="Explain Here"></textarea>
+		</p>
+		<p>
+			How many of these movies have you seen?: <br/>
+			<input type="checkbox" name="quiz" value="TG"/> Top Gun: Maverick
+			<input type="checkbox" name="quiz" value="JB"/> James Bond: No Time to Die 
+			<input type="checkbox" name="quiz" value="BM"/> Bridesmaids 
+			<input type="checkbox" name="quiz" value="BT"/> Batman <br/>
+			<input type="checkbox" name="quiz" value="SB"/> Step Brothers 
+			<input type="checkbox" name="quiz" value="TH"/> The Hangover
+
+
+
+		</p>
+		<p>
+			<input type="submit" name="Submit" value="Submit"/> &nbsp;
+			<input type="reset" name="Reset" value="Reset"/>
+		</p>
+
+	</form>	
+
+
+	
+	
+  </body>
+</html>
