@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Change the Title, Please</title>
+	<style>
+	p, h3 {text-align:center;}
+	img {width:30%;}
+    button {width:150px; height:40px; background-color:green;; font-family:arial; color:yellow;}
+    div#b{text-align:center;}
+	</style>
+    <script type="text/javascript">
+        var imgstoshow = new Array ("tiger5.jpg", "tiger6.jpg", "tiger7.jpg", "tiger8.jpg");
+        /* this global variable preloads the images so there is no delay after the page loads */
+        var ctr = 0; /* this navigates the index of the imgstoshow array */
+        var imgcols = new Array ("pink", "yellow", "aqua", "magenta");
+        var caps = new Array ("This is WebTech", "This is Fun", "Teaches me Everythin", "Under the Sun");
+        var runflag = 0, mycontrol; 
+        function showSlides()
+        {
+            runflag = 1;
+            var myimg = document.getElementById("daimg");
+            myimg.src = imgstoshow[ctr];
+            myimg.style.boxShadow = "20px 20px 10px "+ imgcols[ctr];
+            document.getElementById("h").innerHTML = caps[ctr];
+            ++ctr; /* ctr = ctr + 1; - basically, increments the counter by 1*/
+            if (ctr > imgstoshow.length - 1) /* checks to see if we reach the end of the set of images */
+            {
+                ctr = 0;
+            }
+             mycontrol = setTimeout("showSlides()", 2000); /* recursive call to the function, every 2 seconds */
+        }
+/* The way this works: initially the ctr is 0. When the function runs, the source is set to imgstoshow[0],
+the first image in the array imgstoshow. Then the ctr is incremented by 1. 
+Then, we check to see if we reached the end of the array - if yes, reset the ctr to 0 and then call the 
+function again. If not, call the function again. In the next call to the function, ctr is 1 and the 
+next image in imgstoshow, imgstoshow[1], will be seen. This process repeats forever. */
+
+
+function ssran()
+        {
+            runflag = 1;
+            var myimg = document.getElementById("daimg");
+            var c;
+            c = Math.floor( Math.random() * imgstoshow.length);
+            myimg.src = imgstoshow[c];
+            document.getElementById("h").innerHTML = caps[c];
+            myimg.style.boxShadow = "10px 10px 20px " + imgcols[c];
+            mycontrol = setTimeout("ssran()", 1000);
+           
+        }
+
+        function startStop()
+        {
+            if (runflag == 1)
+            {
+                runflag = 0;
+                clearTimeout(mycontrol);
+            }
+            else
+            {
+                mycontrol = setTimeout("ssran()", 1000);
+            }
+        }
+    </script>
+</head>
+<body onload="ssran()">
+    <p>
+    
+    <img id="daimg" src="tiger5.jpg" alt="Slide Show of Tigers" title="Tigers"/>
+    
+    </p>
+    <h3 id="h"></h3>
+    <!-- The above h3 will be used for showing a caption, if needed.-->
+    <div id="b">
+        <button onclick="startStop()">Click to stop/resume</button>
+    </div>
+     
+</body>
+</html>
