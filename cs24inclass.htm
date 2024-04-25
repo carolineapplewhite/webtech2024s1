@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Jquery plug ins</title>
+
+	<style>
+	/* Your styles go here */
+
+		h1#h11 {font-family:lucida; font-weight: bold; color: dark green; margin-left: 300px; margin-right: 300px;}
+		h2#h21 { font-family: 'Courier New', Courier, monospace; color: purple; margin-left: 400px; margin-right: 300px; margin-top: 250px; }
+		.animate-typing { font-family: serif; color: blue; text-align: center; font-size: larger;}
+	</style>
+	
+	<script src="https://code.jquery.com/jquery.min.js" type="text/JavaScript"> </script>
+	<script src="jquery.arctext.js" type="text/JavaScript"></script>
+	
+	<script type="text/JavaScript">
+
+		$(function(){/*start of my API*/
+
+			$("h1#h11").click (function() {
+
+				$(this).arctext({radius:200, dir: 1});
+				$("h2#h21").arctext({radius:400, dir:-1});
+
+			})
+
+		});
+
+	</script>
+	
+	
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+		<h1 id="h11">Thank you all for a great semester</h1>
+		<h2 id="h21">Good Luck with everything</h2>
+	<div
+        class="animate-typing"
+        data-animate-loop="true"
+        data-type-speed="200"
+        data-type-delay="200"
+        data-remove-speed="50"
+        data-remove-delay="500"
+        data-cursor-speed="200">
+            I agree to abide by Babson Honor Code so help me God!!
+    </div>
+
+	
+	<script src="jquery.animateTyping.js" type="text/JavaScript"></script>
+  </body>
+</html>
