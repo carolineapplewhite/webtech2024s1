@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Thriller Movies</title>
+
+	<style>
+		/* Your styles go here */
+		body{ background-image: url(blobback.jpg);}
+		h1{text-align: center; font-family: cursive; color: lightgreen;}
+
+		h3 {
+			border-color: black;
+			border-width: 15%;
+			text-align: center;
+		}
+	p#p1 {display:none;background-color: lightcyan; margin-right: 200px; margin-left: 200px; color: purple; font-size: larger; font-family: 'Segoe UI';}
+	p#p21 {background-color: blanchedalmond; color: olive; margin-left: 100px; margin-right: 100px; padding: auto;}
+  div#slider {margin-left: 500px; margin-right: 500px;}
+
+	</style>
+
+<script src="https://code.jquery.com/jquery.min.js"></script>
+<script src="jqFancyTransitions.1.8.js"></script>
+<script src="jquery.cycle.all.js"></script>
+<script src="jquery.easing.js"></script>
+<script>
+
+	$(function (){
+
+		$("h1#h11").click (function(){
+
+		$("p#p1").slideToggle();
+
+		if ($(this).html() == "Thriller Movies (+)")
+  {
+	$(this).html ("Less About Thriller Movies(-)");
+  }
+  else
+  {
+	$(this).html ("Thriller Movies (+)");
+  }
+
+});
+
+	$('#slider').cycle({ 
+	 fx:  'shuffle', 
+ 	easing: 'easeOutBack', 
+ 	 delay:  -4000 
+	});
+
+
+	});
+
+</script>
+
+</head>
+
+<body>
+	<!-- Your HTML goes here -->
+	<h1 id="h11">Thriller Movies (+)</h1>
+	<br />
+
+	<p id="p1"> Thriller movies are my favorite type of movies, you neve know what is going to happen next. I am drawn to
+		thriller movies for the adrenaline rush they provide, the suspense that keeps us on the edge of our seats, and the
+		intellectual challenge of unraveling complex mysteries. Thrillers offer an escape into a world of excitement and
+		danger, triggering a range of emotions from fear to exhilaration. Ultimately, the appeal of thriller movies lies
+		in their ability to captivate our minds and emotions, offering an immersive experience that keeps us coming back
+		for more.
+	</p>
+	<hr>
+
+	<div id="slider">
+
+		<img src="shutter.jpg" alt="Shutter Island" title="Title 1" width="400" height="600"/>
+		<img src="incep.jpg" alt="Inception" title="Title 2" width="400" height="600"/>
+		<img src="inter.jpg" alt="Interstellar" title="Title 3" width="400" height="600"/>
+		<img src="split.jpg" alt="Split" title="Title 4" width="400" height="600"/>
+		
+	</div>
+	<p id="p21">
+		Shutter Island stars Leonardo DiCaprio as U.S. Marshal Teddy Daniels, who, along with his partner Chuck Aule, played
+		by Mark Ruffalo, investigates the disappearance of a patient from a psychiatric facility on Shutter Island. As
+		they delve deeper into the mystery, Teddy begins to question his own sanity and reality, uncovering dark secrets
+		about the island and its inhabitants. Filled with suspense, twists, and a haunting atmosphere, "Shutter Island"
+		keeps viewers on the edge of their seats as the truth slowly unravels. The film is praised for its atmospheric
+		direction, compelling performances, and intricate plot.The film stars Leonardo DiCaprio as Dom Cobb, a skilled thief who specializes in the art of extracting secrets
+		from people's dreams. Cobb is offered a chance to have his criminal record erased in exchange for planting an
+		idea into the mind of a wealthy businessman. To accomplish this seemingly impossible task, Cobb assembles a team
+		of specialists to navigate multiple layers of dreams within dreams. As the heist unfolds, Cobb confronts his own
+		past and struggles to distinguish between reality and the dream world. "Inception" is celebrated for its
+		mind-bending plot, stunning visuals, and thought-provoking exploration of concepts like memory, reality, and the
+		subconscious. The next film follows a group of astronauts, including Cooper (Matthew McConaughey) and Brand (Anne Hathaway), as
+		they embark on a journey through a newly discovered wormhole near Saturn to find a habitable planet for
+		humanity, as Earth faces ecological collapse. The narrative explores themes of love, sacrifice, and the survival
+		of the human race as the crew grapples with the vastness of space, time dilation, and the mysteries of the
+		universe. "Interstellar" is renowned for its stunning visuals, intricate storytelling, and thought-provoking
+		exploration of scientific concepts, making it a modern classic in the science fiction genre. For the last film it follows the story of Kevin Wendell Crumb, portrayed by James McAvoy, a man with dissociative identity
+		disorder (DID) who possesses 23 distinct personalities. After kidnapping three teenage girls, Kevin's
+		personalities begin to manifest in dangerous ways, with one dominant persona, "The Beast," emerging as a
+		terrifying threat. As the girls attempt to escape, they navigate the complexities of Kevin's fractured mind and
+		uncover the secrets behind his condition. "Split" is praised for McAvoy's mesmerizing performance, its tense
+		atmosphere, and its exploration of mental illness and trauma. The film is also notable for its connection to
+		Shyamalan's earlier work, "Unbreakable," and its subsequent sequel, "Glass."
+
+	</p>
+
+</body>
+
+</html>

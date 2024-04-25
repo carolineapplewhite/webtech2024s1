@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Contact Us</title>
+
+	<style>
+	/* Your styles go he */
+
+	h1 {text-align: center; background-color: blue;} 
+	form {
+		float: left;
+		background-color: light pink;
+	}
+
+	
+        img {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0; 
+			margin-top: 250px;
+        }
+	</style>
+	
+	<script>
+
+	function showResult()
+     {
+      var myf, myname, myage, mysex, mylevel, mycolor;
+             event.preventDefault();
+             myf = document.getElementById("knowme");
+                 myname = myf.name.value;
+                 myage = myf.age.value;
+            	  mylevel = myf.level.value;
+                    mysex = myf.sex.value;
+                    mycolor = myf.colors.value;
+
+                    mylevel = mylevel.toLowerCase();
+                    /* THis starts the validation*/
+                    if(myname  == "")
+                    { 
+                        alert("Please enter your name")
+                    }
+                    else if (( myage == "") || (isNaN(myage) == true))
+                    {
+                        alert("Please enter your age as a numerical value ");
+
+                    }
+                    else if ((mylevel  != "freshman") && (mylevel != "sophomore") && (mylevel  != "junior") && (mylevel != "senior"))
+                    {
+                        alert("Please enter on of freshperson, sophomore, junior, or senior");
+                    }
+                    else if (mycolor == "null")
+                    {
+                        alert("Please select a color");
+                    }
+                        else 
+                    {
+                        myf.result.value = myname + myage + mysex + mylevel;
+                        myf.style.backgroundColor = myColor;
+
+                    }
+
+                }
+
+
+	var imageElement; 
+    var xPos = 0;
+
+    
+    function scrollImage() {
+        imageElement = document.getElementById("contactImage");
+        xPos += 2; 
+        imageElement.style.left = xPos + 'px';
+        
+        if (xPos > window.innerWidth) {
+            xPos = -imageElement.width; 
+        } 
+        requestAnimationFrame(scrollImage);
+    }
+
+    window.onload = function() {
+        scrollImage();}
+
+
+	</script>
+	
+  </head>
+
+
+  <body>
+	<!-- Your HTML goes here -->
+		
+<h1> Contact Information</h1>
+<ul>
+	<li>Caroline Applewhite
+		<ol>
+			<li> Email-capplewhite1@babson.edu</li>
+			<li> School-Babson College</li>
+			<li>Address- 231 Forest St, Wellesley, MA 02481</li>
+		</ol>
+	</li>
+	<li></li>
+</ul>
+
+
+	<form  id="knowme" action="" method="post">
+		<p>
+			Enter your name: <input type="text" name="name" size="40" /> &nbsp;&nbsp;
+			Enter your age : <input type="text" name="age" size="4" />
+		</p>
+		<p> 
+			Select your gender: &nbsp;
+			<select name="sex">
+				<option value="Female"> Female </option>
+				<option value="Male"> Male </option>
+			</select>
+		</p>
+		<p>
+			Enter College Level: <input type="text" name="level" size="20" placeholder="Freshman,sophomore, etc."/>
+		</p>
+		<p>
+			Select the color you want for the form: &nbsp;
+			<select name="colors">
+				<option value="null"> Please select a color</option>
+				<option value="green">green</option>
+				<option value="blue">blue</option>
+				<option value="yellow">yellow</option>
+			</select>
+		</p>
+		<p> 
+			Your selections will appear here: <br />
+			<textarea name="result" cols="40" rows="3"></textarea>
+		</p>
+		<p>
+			<input onclick="showResult()" type="submit" name="submit" value="Show Me" style="width:100px;height:40px" />
+			&nbsp;&nbsp;
+			<input type="reset" name="reset" value="Clear Me" style="width:100px;height:40px" />
+</form>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+	
+	<img id="contactImage" src="contact.jpg" alt="contact" title="contact" style="position: absolute; top: 50%; transform: translateY(-50%); left: 0;"/>
+
+	
+  </body>
+</html>

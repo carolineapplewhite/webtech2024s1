@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Price of Movie Tickets</title>
+
+	<style>
+	/* Your styles go here */
+
+	h1{background-color: plum ;  text-align: center;}
+	div { font-size: xx-large; text-align: center; margin-top: 150px;}
+	label#price{text-align: left;}
+
+	</style>
+	
+
+	<script src="https://code.jquery.com/jquery.min.js" type="text/JavaScript"> </script>
+	<script src="jquery.arctext.js" type="text/JavaScript"></script>
+	
+
+	<script type="text/JavaScript">
+		$(function(){
+
+		$("h1#movie").click (function() {
+
+		$("h1#movie").arctext({radius:200, dir: 1});
+		
+
+		})
+
+		});
+
+		const moviePrices = {
+        hungerGames: 8,
+        pitchPerfect: 12,
+        howToLoseAGuy: 16,
+        interstellar: 14
+    };
+
+    
+    function updatePrice() {
+        const movieSelect = document.getElementById("movieSelect");
+        const selectedOption = movieSelect.options[movieSelect.selectedIndex].value;
+
+        const priceInUSD = moviePrices[selectedOption];
+        document.getElementById("moviePrice").textContent = "$" + priceInUSD;
+    }
+
+    
+    function convertToEuros() {
+        const movieSelect = document.getElementById("movieSelect");
+        const selectedOption = movieSelect.options[movieSelect.selectedIndex].value;
+
+        const priceInUSD = moviePrices[selectedOption];
+        const conversionRate = 0.88; // 1 USD = 0.88 Euros
+
+        const priceInEuros = (priceInUSD * conversionRate).toFixed(2);
+        document.getElementById("priceDisplay").value = priceInEuros + " €";
+    }
+    
+</script>
+
+
+
+	</script>
+	
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+	<h1 id="movie">Price of Movie Tickets</h1>
+
+	<div
+        class="animate-typing"
+        data-animate-loop="true"
+        data-type-speed="200"
+        data-type-delay="200"
+        data-remove-speed="50"
+        data-remove-delay="500"
+        data-cursor-speed="200">
+            Movies are so fun to watch !!!!
+    </div>
+
+
+	<h2>Movie Ticket Pricing</h2>
+
+	<form id="ticketForm">
+		<label for="movieSelect">Select a Movie:</label>
+		<select id="movieSelect" name="movie" onchange="updatePrice()">
+			<option value="hungerGames">Hunger Games</option>
+			<option value="pitchPerfect">Pitch Perfect</option>
+			<option value="howToLoseAGuy">How to Lose a Guy in Ten Days</option>
+			<option value="interstellar">Interstellar</option>
+		</select>
+		<br><br>
+		
+		<div id="priceSection">
+			<label id="price">Price (USD):</label>
+			<span id="moviePrice">$8</span>
+		</div>
+		<br><br>
+	
+		<button type="button" onclick="convertToEuros()">Convert to Euros</button>
+		<br><br>
+	
+		<label for="priceDisplay">Price (EUR):</label>
+		<input type="text" id="priceDisplay" readonly>
+	</form>
+
+
+
+	<script src="jquery.animateTyping.js" type="text/JavaScript"></script>
+	
+  </body>
+</html>

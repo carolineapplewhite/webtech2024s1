@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Classic Comedy Movies</title>
+
+	<style>
+		/* Your styles go here */
+		body {
+			background-image: url(backg.jpg);
+			background-repeat: repeat;
+			background-position: center;
+			background-attachment: fixed;
+		}
+
+		h1 {
+			font-size: 60px;
+			font-weight: bolder;
+			text-align: center;
+		}
+
+		table,
+		td {
+			border: 2px solid black;
+		}
+
+		table {
+			font-family: Cochin;
+			color: black;
+			text-align: center;
+			width: 70%;
+			margin-right: auto;
+			margin-left: auto;
+			border-collapse: collapse;
+		}
+
+		tr#row1 {
+			background-color: lightgoldenrodyellow;
+			font-weight: bold;
+			color: rgb(176, 9, 242);
+			font-weight: bold;
+			font-size: x-large
+		}
+
+		.c1 {
+			width: 30%;
+			font-size: larger;
+		}
+
+		.c2 {
+			width: 45%;
+		}
+		.c3 {font-weight: bold;}
+
+		img {
+			width: 80%;
+		}
+
+		#coom {
+            cursor: pointer;
+        }
+		#coom.border-highlight {
+            border: 2px solid red; 
+            padding: 10px; 
+        }
+		img {
+            width: 80%;
+            transition: transform 0.3s ease; 
+        }
+
+        img:hover {
+            transform: scale(1.1);}
+
+	</style>
+
+<script>
+ function addBorder() {
+            var h1Element = document.getElementById("coom");
+            h1Element.classList.add("border-highlight"); 
+        }
+
+        
+        function removeBorder() {
+            var h1Element = document.getElementById("coom");
+            h1Element.classList.remove("border-highlight"); }
+
+
+			window.onload = function() {
+            var images = document.querySelectorAll('img');
+
+            
+            images.forEach(function(img) {
+                img.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.1)'; 
+                });
+
+                img.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            });
+        };
+
+</script>
+
+</head>
+
+<body>
+	<!-- Your HTML goes here -->
+	<h1 id="coom" onmouseover="addBorder()" onmouseout="removeBorder()">Comedy Movies</h1>
+	<table>
+		<tr id="row1">
+			<td class="c1"> Movie Name</td>
+			<td class="c2"> About the Movie </td>
+			<td class="c3"> Movie Rating</td>
+			<td> Movie Picture</td>
+		</tr>
+
+		<tr>
+			<td class="c1"> Step Brothers</td>
+			<td class="c2"> The movie stars Will Ferrell and John C. Reilly as Brennan Huff and Dale Doback, two
+				middle-aged men who become stepbrothers when their single parents marry. The film follows their
+				tumultuous relationship as they initially clash but eventually bond over their shared immaturity and
+				inability to move out of their parents' homes. Filled with outrageous humor and absurd situations, "Step
+				Brothers" explores themes of family, maturity, and the unconventional ways people find connection.
+				Ferrell and Reilly's comedic chemistry drives the film, making it a beloved cult classic in the realm of
+				modern comedy.</td>
+			<td class="c3"> 9.7/10 </td>
+			<td> <img src="Stepbrothersjpg.jpg" alt="stepbrothers" title="stepbrothers"> </td>
+		</tr>
+		<tr>
+			<td class="c1"> The Hangover</td>
+			<td class="c2"> The movie revolves around a group of friends - Phil, Stu, Alan, and Doug - who head to Las
+				Vegas for a bachelor party. However, their night takes an unexpected turn when they wake up the next
+				morning with no memory of the previous night's events and the groom, Doug, missing. As they attempt to
+				retrace their steps and piece together the wild and chaotic night, they encounter various hilarious and
+				absurd situations, including a missing tooth, a tiger in their hotel room, and a baby in their suite.
+				The film is known for its outrageous humor, unexpected twists, and the camaraderie between the main
+				characters as they navigate the consequences of their epic night out. </td>
+			<td class="c3"> 9.5/10 </td>
+			<td> <img src="hangover.jpg" alt="hangover" title="the hangover"> </td>
+		</tr>
+
+		<tr>
+			<td class="c1"> Date Night</td>
+			<td class="c2"> The movie stars Steve Carell and Tina Fey as Phil and Claire Foster, a suburban couple whose
+				routine date night turns into a wild adventure. In an attempt to reignite the spark in their marriage,
+				Phil and Claire decide to have a special night out in New York City. However, their plans take a
+				dramatic turn when they are mistaken for another couple, the Tripplehorns, who are involved in a
+				dangerous criminal conspiracy. As they dodge the authorities and dangerous criminals, Phil and Claire
+				must rely on each other to survive the chaotic night. "Date Night" combines humor, action, and heartfelt
+				moments as the couple rediscovers their love for each other amidst the mayhem of their unexpected
+				adventure. </td>
+			<td class="c3"> 8.8/10 </td>
+			<td> <img src="datenight.jpg" alt="datenight" title="datenight"> </td>
+		</tr>
+
+		<tr>
+			<td class="c1"> Pitch Perfect</td>
+			<td class="c2"> The movie follows Beca Mitchell, a rebellious college freshman played by Anna Kendrick, who
+				reluctantly joins an all-female a cappella group called the Barden Bellas at her university. Led by the
+				strict and traditional Aubrey Posen, portrayed by Anna Camp, the Bellas are aiming to redeem themselves
+				after a disastrous performance the previous year. Beca, along with a diverse group of misfit singers,
+				brings fresh ideas and modern music styles to the group, challenging their conventional approach.
+				Together, they embark on a journey to compete against their male rivals, the Treblemakers, in a series
+				of a cappella competitions. "Pitch Perfect" is celebrated for its catchy musical performances, witty
+				humor, and ensemble cast chemistry. The film's success spawned sequels and established itself as a
+				beloved entry in the musical comedy genre. </td>
+			<td class="c3"> 8.5/10 </td>
+			<td> <img src="pitcj.jpg" alt="pitch" title="pitch perfect"> </td>
+		</tr>
+
+		<tr>
+			<td class="c1"> Talladega Nights </td>
+			<td class="c2"> he movie stars Will Ferrell as Ricky Bobby, a NASCAR racing sensation known for his
+				outrageous antics and arrogance. However, Ricky's career takes a hit when he faces competition from a
+				French Formula One driver, Jean Girard, played by Sacha Baron Cohen. The film follows Ricky as he
+				navigates personal and professional challenges, including rivalry with Girard and reconciliation with
+				his family. Filled with absurd humor and over-the-top racing scenes, "Talladega Nights" is a satirical
+				take on the world of professional racing and American culture.</td>
+			<td class="c3"> 9.4/10 </td>
+			<td> <img src="talla.jpg" alt="Talladega" title="Talladega Nights"> </td>
+		</tr>
+
+
+	</table>
+
+
+
+
+
+</body>
+
+</html>

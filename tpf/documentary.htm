@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Documentary</title>
+
+	<style>
+		/* Your styles go here */
+		
+		h1 {
+            text-align: center;
+            background-color: brown;
+            color: white;
+            padding: 10px;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+            width: 250px;
+            height: auto;
+            border: 2px solid black;
+            margin-bottom: 20px;
+		}
+		button {text-align: center;}
+		h3 {
+			color: white;
+			background-image: url(roun.jpg);
+		}
+		h2 {
+			margin: 10%; text-align: center; padding: 10%; color: black;background-color: beige;
+		}
+	</style>
+		
+
+	
+
+	<script type = "text/javascript">
+
+	
+		var currentImage = 1; // Track the current image number
+
+        function changeImage() {
+            var imgElement = document.getElementById("imageToChange");
+
+            // Determine the next image based on the current image
+            if (currentImage === 1) {
+                imgElement.src = "inven.jpg";
+                imgElement.alt = "Inventor";
+                imgElement.title = "Inventor";
+                currentImage = 2;
+            } else if (currentImage === 2) {
+                imgElement.src = "fvf.jpg";
+                imgElement.alt = "FVF";
+                imgElement.title = "FVF";
+                currentImage = 3;
+            } else {
+                imgElement.src = "mcdon.jpg";
+                imgElement.alt = "Mcdonalds";
+                imgElement.title = "Mcdonalds";
+                currentImage = 1;
+            }
+        }
+	</script>
+</head>
+
+<body>
+	<!-- Your HTML goes here -->
+
+	<h1>Good Documentary Movies</h1>
+	<img id="imageToChange"  src="mcdon.png" title="Mcdonalds"
+		alt="Mcdonalds" />
+		<button onclick="changeImage()">Click to Change Image</button>
+	<!--<img id="two" src="inven.jpg" title="Inventor"
+		alt="Inventor" width="250" />
+	<img id="three" src="fvf.jpg" title="FVF" alt="FVF" width="250" />-->
+
+	<h3>
+		One of my all time favorite genres are documentaries. I expecially like the ones that are turned into movies but
+		still telling the stories of real life events and real people. enjoy documentaries, particularly those adapted
+		into movies, because they offer a captivating blend of real-life storytelling and cinematic artistry. These
+		films often delve into intriguing subjects, providing an immersive experience that educates, entertains, and
+		prompts reflection. By combining the authenticity of factual narratives with the creative expression of
+		filmmaking, documentary movies have a unique power to engage and inspire audiences, leaving a lasting impact
+		long after the credits roll.
+	</h3>
+
+	<h2>
+		"The Founder" is a compelling watch because it delves into the fascinating story of how Ray Kroc transformed
+		McDonald's into a global empire. The film provides a captivating portrayal of ambition, innovation, and the
+		complexities of business ethics.
+
+		Similarly, "The Inventor" offers a riveting exploration of the rise and fall of Elizabeth Holmes and Theranos,
+		showcasing the allure and pitfalls of Silicon Valley's culture of disruption and innovation.
+
+		"Ford v Ferrari" stands out as a gripping depiction of the real-life rivalry between car manufacturers Ford and
+		Ferrari during the 1960s. It combines exhilarating racing sequences with nuanced character development, offering
+		audiences a thrilling and insightful glimpse into the world of motorsports and corporate competition.
+
+		These movies excel at bringing real-life events to the big screen with compelling storytelling, strong
+		performances, and attention to detail. They not only entertain but also offer valuable insights into the human
+		experience and the dynamics of success and failure in the business world.
+	</h2>
+
+
+</body>
+
+</html>

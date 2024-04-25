@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>About Me</title>
+
+	<style>
+		/* Your styles go here */
+		h1 {
+			text-align: center;
+			padding-top: 5%;
+			background-color: green;
+		}
+
+		img#vol {
+			width: 20%;
+			display: block;
+			float: right;
+			border-radius: 10%;
+			border-color: green;
+			padding: 2%;
+		}
+
+		@keyframes dizzy {
+			from {
+				transform: rotate(0deg)
+			}
+
+			to {
+				transform: rotate(25deg)
+			}
+		}
+
+		.vol {
+			animation-name: dizzy;
+			animation-duration: 15s;
+			animation-iteration-count: 2;
+			animation-timing-function: ease-out;
+			margin-top: 3%;
+		}
+
+		@keyframes moveit {
+			from {
+				left: 20px
+			}
+
+			to {
+				left: 20px
+			}
+		}
+
+		.p {
+			border-radius: 20%;
+			border-color: aqua;
+		}
+		p, h3 {text-align:center;}
+	img {width:30%;}
+    button {width:150px; height:40px; background-color:green;; font-family:arial; color:yellow;}
+    div#b{text-align:center;}
+	h5{ text-align: center;	}
+	</style>
+
+
+<script type="text/javascript">
+	var imgstoshow = new Array ("volleyball.jpg", "puppy.jpg", "stocks.jpg", "beach.jpg");
+	/* this global variable preloads the images so there is no delay after the page loads */
+	var ctr = 0; /* this navigates the index of the imgstoshow array */
+	var imgcols = new Array ("pink", "yellow", "magenta", "aqua");
+	var caps = new Array ("I play volleyball", "Puppies are my favorite animal", "I like the stock market", "I love going to the beach");
+	var runflag = 0, mycontrol; 
+	function showSlides()
+	{
+		runflag = 1;
+		var myimg = document.getElementById("daimg");
+		myimg.src = imgstoshow[ctr];
+		myimg.style.boxShadow = "20px 20px 10px "+ imgcols[ctr];
+		document.getElementById("h").innerHTML = caps[ctr];
+		++ctr; /* ctr = ctr + 1; - basically, increments the counter by 1*/
+		if (ctr > imgstoshow.length - 1) /* checks to see if we reach the end of the set of images */
+		{
+			ctr = 0;
+		}
+		 mycontrol = setTimeout("showSlides()", 2000); /* recursive call to the function, every 2 seconds */
+	}
+
+	function ssran()
+	{
+		runflag = 1;
+		var myimg = document.getElementById("daimg");
+		var c;
+		c = Math.floor( Math.random() * imgstoshow.length);
+		myimg.src = imgstoshow[c];
+		document.getElementById("h").innerHTML = caps[c];
+		myimg.style.boxShadow = "10px 10px 20px " + imgcols[c];
+		mycontrol = setTimeout("ssran()", 1000);
+	   
+	}
+
+	function startStop()
+	{
+		if (runflag == 1)
+		{
+			runflag = 0;
+			clearTimeout(mycontrol);
+		}
+		else
+		{
+			mycontrol = setTimeout("ssran()", 1000);
+		}
+	}
+
+
+
+
+
+
+</script>
+
+
+
+
+</head>
+
+<body onload="ssran()">
+	<!-- Your HTML goes here -->
+
+	<h1> About Me </h1>
+
+	<p>
+		My name is Caroline Applewhite, and I’m from Boca Raton, Florida. I am a senior here at
+		Babson College and also captainof the volleyball team. I came to Babson College because I wanted to study
+		business but more of the finance and
+		entrepreneur side, I would hope to create my own business one day, but for now I want to work in wealth
+		management, or private equity here in Boston. One thing that I love to do is I love to travel, I have been to
+		over 20 countries in my life and will hopefully be able to travel to more.
+		Some of my hobbies include playing volleyball, which is a huge hobby of mine, that I’ve been playing since I was
+		about 10 years old. I played a lot of sports when I was young but i stuck with volleyball. some of my other
+		interests and hobbies are scuba diving, since I am from Florida I am very close to the beach, so my family and I
+		love to scuba dive when we have free time. The main thing I love about scuba diving is just how peaceful it is
+		in the ocean when you’re 60 feet down and looking at the beautiful, coral and creatures, and nothing is really
+		bothering them, it’s very peaceful. another thing that I love is watching movies, I am a huge fan of movies. I
+		could watch movies all day, and some of my favorites are shutter, Island, the hangover, and inception. I also
+		love going to sports games like Miami Dolphins, Miami Heat, Florida State football games.
+
+		<!--<map name="babson" id="vol"> </map>
+		<img id="vol" src="volleyball.JPG" alt="volleyball" title="volleyball" />
+		<area shape="rect" coords="3" href="babsoncollege.org" alt="Babson College" /></!-->
+
+
+		
+			<p>
+			
+			<img id="daimg" src="volleyball.jpg" alt="Slide Show of Things I like" title="About Me"/>
+			
+			</p>
+			<h3 id="h"></h3>
+			<!-- The above h3 will be used for showing a caption, if needed.-->
+			<div id="b">
+				<button onclick="startStop()">Click to stop/resume</button>
+			</div>
+
+
+<h5> This is a video of the top 20 genuis plays in volleyball games!</h5>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/gg-ciHf1YXU?si=SVeyI0tH7JxtmAAG"
+			title="YouTube video player" frameborder="0"
+			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+			allowfullscreen></iframe>
+
+
+
+
+
+	</p>
+
+
+
+
+</body>
+
+</html>
